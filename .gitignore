@@ -74,6 +74,8 @@ venv.bak/
 
 # Project specific
 models/*.pkl
+models/backtest_predictions.csv
+models/backtest_report.json
 logs/*.log
 /*.log
 *.key

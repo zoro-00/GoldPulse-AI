@@ -57,7 +57,6 @@ gold-price-prediction/
 ├── streamlit_dashboard.py              # Main dashboard application
 ├── scheduler.py                        # Automated monitoring
 ├── train_and_backtest_model.py         # Retrain + backtest + save artifacts
-├── save_models_notebook.py             # Legacy notebook helper
 ├── requirements.txt                    # Python dependencies
 ├── models/                             # Saved models (created after training)
 │   ├── xgboost_model.pkl
@@ -65,7 +64,6 @@ gold-price-prediction/
 │   ├── model_metadata.json
 │   ├── backtest_report.json
 │   └── backtest_predictions.csv
-└── Gold_Price_Prediction_Phase1_XGBoost.ipynb
 ```
 
 ---
@@ -406,8 +404,8 @@ alert_system.send_daily_summary(current_price, predictions, state_prices)
    - Cross-validation
 
 5. **Save Models**
-   - Use `save_models_notebook.py` code
-   - Creates `models/` directory with pickle files
+   - Run `python train_and_backtest_model.py`
+   - Creates `models/` directory with required runtime artifacts
 
 ---
 
@@ -419,9 +417,8 @@ alert_system.send_daily_summary(current_price, predictions, state_prices)
 
 **Solution:**
 
-1. Run your notebook completely
-2. Add the save models code at the end
-3. Verify `models/` directory contains 3 .pkl files
+1. Run `python train_and_backtest_model.py`
+2. Verify `models/` contains `xgboost_model.pkl`, `feature_columns.pkl`, and `model_metadata.json`
 
 ### Email Not Sending
 
