@@ -546,10 +546,7 @@ State Price = 60,000 × 1.03 × 1.015 = ₹62,742
 
 ---
 
-## 👥 Authors
-
-- **Students:** BT23CSE177 Rishi Shahu | BT23CSE187 Priyanshu Gupta
-- **Course:** Mini Project | ML Lab | CA-1
+## 👥 Authors - Rishi Shahu
 
 ---
 
