@@ -75,6 +75,7 @@ venv.bak/
 # Project specific
 models/*.pkl
 logs/*.log
+/*.log
 *.key
 keynote_extract/
 
