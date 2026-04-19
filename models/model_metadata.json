@@ -1,0 +1,25 @@
+{
+  "target_type": "return",
+  "target_column": "Target_Return",
+  "prediction_unit": "price",
+  "feature_count": 20,
+  "best_params": {
+    "n_estimators": 300,
+    "max_depth": 2,
+    "learning_rate": 0.03,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+  },
+  "cv_mae": 85152.28268773141,
+  "forecast_mode": "baseline",
+  "test_metrics": {
+    "mae": 3092.731974642423,
+    "rmse": 3791.9913989213696,
+    "mape": 2.2327348336940207,
+    "r2": 0.8874641215338648,
+    "direction_accuracy": 38.83495145631068,
+    "baseline_mae": 1985.8730092064022,
+    "baseline_rmse": 3024.10370061663
+  }
+}

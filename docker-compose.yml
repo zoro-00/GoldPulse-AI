@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build: .
+    container_name: gold-price-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./models:/app/models
+      - ./logs:/app/logs
+      - ./config.py:/app/config.py
+    environment:
+      - TZ=Asia/Kolkata
+    restart: unless-stopped
+    networks:
+      - gold-network
+
+  scheduler:
+    build: .
+    container_name: gold-price-scheduler
+    command: python scheduler.py
+    volumes:
+      - ./models:/app/models
+      - ./logs:/app/logs
+      - ./config.py:/app/config.py
+    environment:
+      - TZ=Asia/Kolkata
+    restart: unless-stopped
+    depends_on:
+      - dashboard
+    networks:
+      - gold-network
+
+networks:
+  gold-network:
+    driver: bridge
+
+volumes:
+  models:
+  logs:
